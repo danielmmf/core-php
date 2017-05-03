@@ -15,8 +15,14 @@ cd core-php
 
 composer init
 
-composer require incube8/codeception-lumen
-
 composer require codeception/codeception
+
+./vendor/bin/codecept bootstrap
+
+./vendor/bin/codecept run
+
+
+#essa hora deve ter executado o minimo de testes.
+
 
 
