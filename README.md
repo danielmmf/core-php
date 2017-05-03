@@ -25,4 +25,4 @@ composer require codeception/codeception
 #essa hora deve ter executado o minimo de testes.
 
 
-
+composer require behat/behat behat/mink behat/mink-extension
