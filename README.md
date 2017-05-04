@@ -91,10 +91,23 @@ php artisan wn:resource player "name;string;required;fillable group_id;integer:u
 
 
 isso vai gerar os seguintes arquivos que vamos chamar nos nossos testes
+
 Player model
+
 players migration
+
 REST actions trait
+
 PlayersController
+
 player routes
+
 App\Player factory
+
+
+para criar o codigo de novo player , não podemos fazer sem testes
+vendor/bin/codecept generate:test unit Player
+
+isso vai gerar um teste unitario pra player dentro da suite de testes unitarios
+
         
