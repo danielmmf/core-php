@@ -84,7 +84,7 @@ adicionar essa linha na area de register services providers
 
 $app->register('Wn\Generators\CommandsServiceProvider');
 
-
+-----------------------------------------
 vamos rodar o codigo do gerador pra criar os arquivos e tudo mais do usuario.
 
 php artisan wn:resource player "name;string;required;fillable group_id;integer:unsigned;numeric;fillable,key baithday;date;;date" --add=timestamps --belongs-to=group
@@ -105,8 +105,11 @@ player routes
 App\Player factory
 
 
+-------------------------------------
 para criar o codigo de novo player , não podemos fazer sem testes
+
 vendor/bin/codecept generate:test unit Player
+
 
 isso vai gerar um teste unitario pra player dentro da suite de testes unitarios
 
