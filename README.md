@@ -7,10 +7,10 @@ Esse é o core basico em php , a ideia é medir o tempo das demandas em cima dos
 
 composer global require "laravel/lumen-installer"
 
-~/.config/composer/vendor/laravel/lumen-installer/lumen core-php
+~/.config/composer/vendor/laravel/lumen-installer/lumen core-php //corephp é um nome generico pro projeto facil de trocar depois
 
 
-cd core-php
+cd core-php //nome qualquer do projeto
 
 
 composer init
@@ -62,9 +62,13 @@ cp .env.example testing.env
 vamos usar um gerador de codigos padrão que deve vir montado em cima de uma documentação generica qualquer.
 entenda que devemos ter um dicionario onde o cliente deve escrever aquelas regras acima e devemos ter como extrair alguns campos
 
+
 composer require wn/lumen-generators //https://github.com/webNeat/lumen-generators
 
+
+
 em app/Providers/AppServiceProvider.php modificar a função register:
+
 public function register()
     {
         if ($this->app->environment() == 'local') {
@@ -73,15 +77,24 @@ public function register()
     }
 
 
+
 em bootstrap/app.php
+
 adicionar essa linha na area de register services providers
+
 $app->register('Wn\Generators\CommandsServiceProvider');
 
 
 vamos rodar o codigo do gerador pra criar os arquivos e tudo mais do usuario.
+
 php artisan wn:resource player "name;string;required;fillable group_id;integer:unsigned;numeric;fillable,key baithday;date;;date" --add=timestamps --belongs-to=group
 
 
-
-
+isso vai gerar os seguintes arquivos que vamos chamar nos nossos testes
+Player model
+players migration
+REST actions trait
+PlayersController
+player routes
+App\Player factory
         
