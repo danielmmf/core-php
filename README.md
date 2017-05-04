@@ -51,5 +51,37 @@ agora precisa fazer passar
 a ideia é que cada card no trello seja uma feature dessa
 alterando o trello e commitando o gerente recebe notificação e verifica pra colocar no ar.
 
+----------
+
+agora vamos configurar os ambientes diferentemente.
+
+cp .env.example .env
+cp .env.example testing.env
+
+
+vamos usar um gerador de codigos padrão que deve vir montado em cima de uma documentação generica qualquer.
+entenda que devemos ter um dicionario onde o cliente deve escrever aquelas regras acima e devemos ter como extrair alguns campos
+
+composer require wn/lumen-generators //https://github.com/webNeat/lumen-generators
+
+em app/Providers/AppServiceProvider.php modificar a função register:
+public function register()
+    {
+        if ($this->app->environment() == 'local') {
+	        $this->app->register('Wn\Generators\CommandsServiceProvider');
+	    }
+    }
+
+
+em bootstrap/app.php
+adicionar essa linha na area de register services providers
+$app->register('Wn\Generators\CommandsServiceProvider');
+
+
+vamos rodar o codigo do gerador pra criar os arquivos e tudo mais do usuario.
+php artisan wn:resource player "name;string;required;fillable group_id;integer:unsigned;numeric;fillable,key baithday;date;;date" --add=timestamps --belongs-to=group
+
+
+
 
         
