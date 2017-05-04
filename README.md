@@ -89,7 +89,7 @@ vamos rodar o codigo do gerador pra criar os arquivos e tudo mais do usuario e u
 
 php artisan wn:resource group "name;string;required;fillable" --add=timestamps --has-many=players --force
 
-php artisan wn:resource player "name;string;required;fillable group_id;integer:unsigned;numeric;fillable,key baithday;date;;date" --add=timestamps --belongs-to=group
+php artisan wn:resource player "name;string;required;fillable group_id;integer:unsigned;numeric;fillable,key baithday;date;;date" --add=timestamps
 
 
 isso vai gerar os seguintes arquivos que vamos chamar nos nossos testes
