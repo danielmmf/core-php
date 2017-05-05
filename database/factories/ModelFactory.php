@@ -17,3 +17,111 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
     ];
 });
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Group.
+ */
+$factory->define(App\Group::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model App\Group.
+ */
+$factory->define(App\Group::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Group.
+ */
+$factory->define(App\Group::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        'group_id' => $faker->key,
+    ];
+});
+
+/**
+ * Factory definition for model App\Player.
+ */
+$factory->define(App\Player::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});

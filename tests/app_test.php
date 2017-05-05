@@ -1,10 +1,15 @@
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
-$envFile = defined('RUNNING_TESTS') ? '.env.testing' : '.env';
+$envFile = '.env.testing';
 
 try {
-    (new Dotenv\Dotenv(__DIR__.'/../'))->load();
+   // (new Dotenv\Dotenv(__DIR__.'/../','.env.testing'))->load();
+	$denv = new Dotenv\Dotenv(__DIR__,'.env.testing');
+	var_dump($denv);
+	var_dump($denv->load());
+    die();
+
 } catch (Dotenv\Exception\InvalidPathException $e) {
     //
     echo 'deu merda no dotenv';

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f8f813f6b95c38a93dccaf235f02d186",
-    "content-hash": "85169068ffb4d5932563c585231524df",
+    "hash": "333677f9bb67601cb6e1ace7cd2f573a",
+    "content-hash": "c8574d6c182fef25633fb807ac896c0b",
     "packages": [
         {
             "name": "behat/behat",
@@ -4778,6 +4778,52 @@
                 "validate"
             ],
             "time": "2016-11-23 20:04:58"
+        },
+        {
+            "name": "wn/lumen-generators",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webNeat/lumen-generators.git",
+                "reference": "5cf6f6ed9c55610a49d55cb9cba58a83a2e646dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webNeat/lumen-generators/zipball/5cf6f6ed9c55610a49d55cb9cba58a83a2e646dd",
+                "reference": "5cf6f6ed9c55610a49d55cb9cba58a83a2e646dd",
+                "shasum": ""
+            },
+            "require": {
+                "fzaninotto/faker": "^1.5",
+                "illuminate/console": "^5.1",
+                "illuminate/filesystem": "^5.1",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wn\\Generators\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amine Ben hammou",
+                    "email": "webneat@gmail.com"
+                }
+            ],
+            "description": "A collection of generators for Lumen and Laravel 5.",
+            "keywords": [
+                "api",
+                "generators",
+                "laravel",
+                "lumen",
+                "rest"
+            ],
+            "time": "2017-02-04 21:55:44"
         }
     ],
     "packages-dev": [],

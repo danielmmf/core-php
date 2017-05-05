@@ -3,7 +3,7 @@ Feature: Create Game
     As a player
     I need to able to create a new game
 
-    Scenario: Cerate a new game
+    Scenario: Create a new game
         Given I am a player
         And I have some data to send
         | username | foo |

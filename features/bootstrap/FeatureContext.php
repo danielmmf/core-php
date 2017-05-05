@@ -17,8 +17,13 @@ class FeatureContext implements Context
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
+
+    private $player;
+
     public function __construct()
     {
+        $this->player = new App\Player;
+
     }
 
     /**
@@ -26,7 +31,8 @@ class FeatureContext implements Context
      */
     public function iAmAPlayer()
     {
-        throw new PendingException();
+        $this->player->nome="usuario de teste";
+        
     }
 
     /**
