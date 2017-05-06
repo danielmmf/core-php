@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Group extends Model {
+class Group extends Model
+{
 
     protected $fillable = ["name"];
 
@@ -16,6 +17,4 @@ class Group extends Model {
     {
         return $this->hasMany("App\Player");
     }
-
-
 }

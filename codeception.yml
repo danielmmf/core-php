@@ -5,7 +5,7 @@ paths:
     data: tests/_data
     support: tests/_support
     envs: tests/_envs
-    env_file: .env.behat
+    env_file: tests/.env
 settings:
     bootstrap: _bootstrap.php
     colors: true
@@ -13,12 +13,4 @@ settings:
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
-modules:
-  config:
-    Db:
-      dsn: 'mysql:host=localhost;dbname=core_test'
-      user: 'root'
-      password: 'entrar'
-      dump: 'tests/_data/dump.sql'
-      populate: false
-      cleanup: true     
+       

@@ -1,20 +1,27 @@
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
+(new Dotenv\Dotenv(__DIR__))->load();
+/*
+Dotenv\Dotenv->makeMutable();
+Dotenv\Dotenv::load(__DIR__.'/testing/');
+Dotenv\Dotenv->makeImmutable();
 $envFile = '.env.testing';
-
+(new Dotenv\Dotenv(__DIR__,'.env.testing'))->load();
+/**
 try {
    // (new Dotenv\Dotenv(__DIR__.'/../','.env.testing'))->load();
-	$denv = new Dotenv\Dotenv(__DIR__,'.env.testing');
-	var_dump($denv);
-	var_dump($denv->load());
+	$denv = new Dotenv\Dotenv(__DIR__.'/testing');
+    $denv->makeMutable();
+    var_dump($denv->load(__DIR__.'/testing'));
+	$denv->makeImmutable();
     die();
 
 } catch (Dotenv\Exception\InvalidPathException $e) {
     //
     echo 'deu merda no dotenv';
 }
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -30,9 +37,11 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-$app->withFacades();
+//$app->withFacades();
 
 $app->withEloquent();
+$app->configure('testing');
+
 
 /*
 |--------------------------------------------------------------------------

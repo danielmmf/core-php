@@ -1,7 +1,7 @@
 <?php
 return [
     
-    'default' => 'local',
+    'default' => 'testing',
     'migrations' => 'migrations',
     'connections' => [
         'local' => [

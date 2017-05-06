@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Player extends Model {
+class Player extends Model
+{
 
     protected $fillable = ["name", "group_id", "group_id"];
 
@@ -19,5 +20,11 @@ class Player extends Model {
         return $this->belongsTo("App\Group");
     }
 
-
+    public static function novoPlayer($novo_player)
+    {
+        $player = new self;
+        $player->name = $novo_player['name'];
+        $player->save();
+        return $player;
+    }
 }

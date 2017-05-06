@@ -1,13 +1,8 @@
-# Codeception Test Suite Configuration
-#
-# Suite for unit (internal) tests.
-
 class_name: UnitTester
 modules:
     enabled:
         - Asserts
-        - \Helper\Unit
-    config:
         - Lumen:
-            environment_file: .env.testing
-            environment: 'local_test' 
+            part: ORM
+            environment_file: .env     
+        - \Helper\Unit
