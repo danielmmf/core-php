@@ -116,4 +116,14 @@ vendor/bin/codecept generate:test unit Player
 
 isso vai gerar um teste unitario pra player dentro da suite de testes unitarios
 
+
+---------------------------------
+
+
+rodar o codesniffer
+
+vendor/bin/phpcs --standard=PSR2 app/
+
+vendor/bin/phpcbf --standard=PSR2 app/
+
         
